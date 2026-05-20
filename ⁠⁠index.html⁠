@@ -1,8 +1,133 @@
-portfolio-item:hover {
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manora Graphic Design Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy-blue: #0B192C;
+            --gold: #D4AF37;
+            --gold-hover: #AA841B;
+            --light-bg: #F5F7F8;
+            --white: #FFFFFF;
+            --text-dark: #333333;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--navy-blue);
+            padding: 20px 10%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: 'Playfair Display', serif;
+            color: var(--gold);
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-decoration: none;
+        }
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: var(--gold);
+        }
+        .hero {
+            background: linear-gradient(135deg, #0B192C 0%, #1E3E62 100%);
+            color: var(--white);
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 {
+            font-size: 48px;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            max-width: 600px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .btn {
+            background-color: var(--gold);
+            color: var(--navy-blue);
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background-color: var(--gold-hover);
+            transform: scale(1.05);
+        }
+        .section {
+            padding: 80px 10%;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 32px;
+            color: var(--navy-blue);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--gold);
+            margin: 10px auto 0;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .portfolio-item {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        .portfolio-item:hover {
             transform: translateY(-5px);
         }
-
-        /* مساحة مستطيلة لوضع صور أعمالك مستقبلاً */
         .portfolio-img-placeholder {
             background-color: #e2e8f0;
             height: 250px;
@@ -12,26 +137,20 @@ portfolio-item:hover {
             color: #718096;
             font-size: 18px;
         }
-
         .portfolio-info {
             padding: 20px;
         }
-
         .portfolio-info h3 {
             color: var(--navy-blue);
             margin-bottom: 10px;
         }
-
-        /* قسم التواصل */
         .contact-section {
             background-color: var(--navy-blue);
             color: var(--white);
         }
-
         .contact-section h2 {
             color: var(--white);
         }
-
         .contact-buttons {
             display: flex;
             justify-content: center;
@@ -39,18 +158,15 @@ portfolio-item:hover {
             margin-top: 30px;
             flex-wrap: wrap;
         }
-
         .btn-outline {
             background: transparent;
             border: 2px solid var(--gold);
             color: var(--gold);
         }
-
         .btn-outline:hover {
             background-color: var(--gold);
             color: var(--navy-blue);
         }
-
         footer {
             background-color: #060f1b;
             color: #718096;
@@ -58,8 +174,6 @@ portfolio-item:hover {
             padding: 20px;
             font-size: 14px;
         }
-
-        /* التوافق مع الموبايل */
         @media (max-width: 768px) {
             header { padding: 15px 5%; }
             .hero h1 { font-size: 36px; }
@@ -69,7 +183,6 @@ portfolio-item:hover {
     </style>
 </head>
 <body>
-
     <header>
         <a href="#" class="logo">MANORA</a>
         <nav>
@@ -78,24 +191,20 @@ portfolio-item:hover {
             <a href="#contact">تواصل معنا</a>
         </nav>
     </header>
-
     <section class="hero">
         <h1>Manora Graphic Design Studio</h1>
         <p>نصنع الأناقة البصرية التي تليق بهويتك التجارية ومناسباتكم السعيدة. نحول الأفكار إلى واقع إبداعي يخطف الأنظار.</p>
         <a href="#portfolio" class="btn">استكشف أعمالنا</a>
     </section>
-
     <section id="about" class="section">
         <h2>شغف بالتصميم</h2>
         <p style="max-width: 800px; margin: 0 auto; font-size: 18px; color: #555;">
             في ستوديو **Manora**، نحن متخصصون في ابتكار وتطوير الهويات التجارية (اللوجوهات)، وتصميم كروت ودعوات الأفراح والمناسبات الإلكترونية والورقية بلمسة فنية مميزة تجمع بين الحداثة والفخامة.
         </p>
     </section>
-
     <section id="portfolio" class="section" style="background-color: #fff;">
         <h2>معرض أعمالنا</h2>
         <div class="portfolio-grid">
-            
             <div class="portfolio-item">
                 <div class="portfolio-img-placeholder">✨ [مكان صورة اللوجو هنا]</div>
                 <div class="portfolio-info">
@@ -103,7 +212,6 @@ portfolio-item:hover {
                     <p>بناء شعارات وهوية بصرية متكاملة ومميزة للمشاريع الناشئة والشركات.</p>
                 </div>
             </div>
-
             <div class="portfolio-item">
                 <div class="portfolio-img-placeholder">💌 [مكان صورة دعوة الفرح]</div>
                 <div class="portfolio-info">
@@ -111,7 +219,6 @@ portfolio-item:hover {
                     <p>دعوات إلكترونية رقمية وبطاقات مطبوعة بأعلى جودة تليق بيومكم الكبير.</p>
                 </div>
             </div>
-
             <div class="portfolio-item">
                 <div class="portfolio-img-placeholder">📐 [مكان صورة المطبوعات]</div>
                 <div class="portfolio-info">
@@ -119,33 +226,18 @@ portfolio-item:hover {
                     <p>تصميم البوسترات، كروت العمل، وتنسيقات السوشيال ميديا الإبداعية.</p>
                 </div>
             </div>
-
         </div>
     </section>
-
     <section id="contact" class="section contact-section">
         <h2>ابدأ مشروعك معنا اليوم</h2>
         <p>جاهزون لتنفيذ طلباتكم وتحويل أفكاركم إلى تصاميم رائعة. تواصلوا معنا عبر منصتكم المفضلة:</p>
         <div class="contact-buttons">
-<a href="#" target="_blank" class="btn">تيك توك (TikTok)</a>
+            <a href="#" target="_blank" class="btn">تيك توك (TikTok)</a>
             <a href="#" target="_blank" class="btn btn-outline">إنستغرام (Instagram)</a>
         </div>
     </section>
-
     <footer>
         <p>&copy; 2026 Manora Studio. جميع الحقوق محفوظة.</p>
     </footer>
-
-</body>
-</html>
-<a href="#" target="_blank" class="btn">تيك توك (TikTok)</a>
-            <a href="#" target="_blank" class="btn btn-outline">إنستغرام (Instagram)</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Manora Studio. جميع الحقوق محفوظة.</p>
-    </footer>
-
 </body>
 </html>
